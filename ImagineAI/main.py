@@ -276,9 +276,9 @@ def text_recognition():
 
 # Execute different functions based on voice commands
 def execute_command(command):
-    if command == "recognition":
+    if command == "recognize the face":
         recognize_faces()
-    elif command == "object":
+    elif command == "object detection":
         cap = cv2.VideoCapture(0)  # Use webcam source 0
         while cap.isOpened():
             ret, frame = cap.read()
@@ -298,9 +298,9 @@ def execute_command(command):
         # Release resources
         cap.release()
         cv2.destroyAllWindows()
-    elif command == "new face":
+    elif command == "capture the face":
         save_new_face()
-    elif command == "scanning":
+    elif command == "Scan this":
         text_recognition()
 
 # Voice command recognition
